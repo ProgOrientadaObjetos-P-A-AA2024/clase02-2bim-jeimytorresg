@@ -19,18 +19,39 @@ public class Ejecutor2 {
         // Debe existir 1 sola impresión de todos los estudiantes presenciales
         // No usar arreglos
         
-        // Trabajo clases 16 junio 2022
-        Scanner entrada = new Scanner(System.in);
+        // Trabajo clases 13 junio 2024
+        Scanner sc = new Scanner(System.in);
         boolean bandera = true;
         String cadena = "";
+        String n, a, ide;
+        byte edad;
+        double costo;
+        int creditos;
+        
         
         while(bandera){
-            System.out.println("ingresa un saludo");
-            String saludo = entrada.nextLine();
-            cadena = String.format("%s%s\n", cadena, saludo);
+            System.out.println("Ingrese el nombre del estudiante: ");
+            n = sc.nextLine();
+            System.out.println("Ingresar el apellido del estudiante: ");
+            a = sc.nextLine();
+            System.out.println("Ingrese la identificacion del estudiante: ");
+            ide = sc.nextLine();
+            System.out.println("Ingrese la edad del estudiante: ");
+            edad = sc.nextByte();
+            
+            System.out.println("Ingrese el numero de creditos: ");
+            creditos = sc.nextInt();
+            System.out.println("Ingrese el costo de los creditos: ");
+            costo = sc.nextDouble();
+            
+            EstudiantePresencial est = new EstudiantePresencial(n,a,ide,edad,
+                    costo,creditos);
+            est.calcularMatriculaPresencial();
+            sc.nextLine();
+            cadena = String.format("%s%s\n", cadena, est);
             System.out.println("Desea salir, pulse S");
-            String opcion = entrada.nextLine();
-            if(opcion.equals("S")){
+            String opcion = sc.nextLine();
+            if(opcion.equalsIgnoreCase("S")){
                 bandera = false;
             }
         }
