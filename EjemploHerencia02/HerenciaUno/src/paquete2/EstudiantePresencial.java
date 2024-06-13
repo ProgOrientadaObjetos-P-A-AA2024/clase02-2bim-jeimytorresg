@@ -1,5 +1,9 @@
 
 package paquete2;
+/*
+Hay un error en la linea 8 porque en esta clase no existe un constructor que
+se pueda acoplar al constructor de la superclase Estudiante. 
+*/
 
 public class EstudiantePresencial extends Estudiante{
     
