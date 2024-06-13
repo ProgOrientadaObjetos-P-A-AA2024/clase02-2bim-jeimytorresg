@@ -41,5 +41,35 @@ public class EstudianteDistancia extends Estudiante{
     public double obtenerMatriculaDistancia(){
         return matriculaDistancia;
     }
+    /*
+    @Override 
+    public String toString(){
+        String cadena = String.format("Nombre: %s\n"
+                + "Numero de asignaturas: %d\n"
+                + "Valor de asignatura: %.2f\n"
+                + "Valor de la matricula: %.2f\n",
+                obtenerNombresEstudiante(), 
+                numeroAsignaturas,
+                costoAsignatura,
+                obtenerMatriculaDistancia());
+        return cadena;
+    }
+*/
+    @Override 
+    public String toString(){
+        String cadena = String.format("%sNumero de asignaturas: %d\n"
+                + "Valor de asignatura: %.2f\n"
+                + "Valor de la matricula: %.2f\n",
+                super.toString(), 
+                numeroAsignaturas,
+                costoAsignatura,
+                obtenerMatriculaDistancia());
+        return cadena;
+    }
+    
+    /*
+    se puede llamar al metodo toString de la superclase Estudiante para poder
+    imprimir los atributos que se encuentren ahi, junto al toString de esta clase
+    */
 
 }
