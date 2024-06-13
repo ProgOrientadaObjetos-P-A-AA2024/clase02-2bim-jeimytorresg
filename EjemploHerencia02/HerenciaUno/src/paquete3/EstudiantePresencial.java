@@ -43,5 +43,28 @@ public class EstudiantePresencial extends Estudiante{
     public double obtenerMatriculaPresencial(){
         return matriculaPresencial;
     }
+    @Override 
+    public String toString(){
+        String cadena = String.format("Apellido: %s\n"
+                + "Identificacion: %s\n"
+                + "Costo de la matricula: %.2f\n",
+                apellidosEstudiante,
+                identificacionEstudiante,
+                matriculaPresencial);
+        return cadena;
+    }
     
+    /*
+    @Override 
+    public String toString(){
+        String cadena = String.format("%sNumero de creditos: %d\n"
+                + "Valor de creditos: %.2f\n"
+                + "Valor de la matricula: %.2f\n",
+                super.toString(), 
+                numeroCreditos,
+                costoCreditos,
+                matriculaPresencial);
+        return cadena;
+    }
+    */
 }
