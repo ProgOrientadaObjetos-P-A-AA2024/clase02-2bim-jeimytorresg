@@ -15,6 +15,12 @@ public class EstudianteDistancia extends Estudiante{
         costoAsignatura = costoAsg;
     }
     
+    /*
+    en el constructor recibe varios parametros, unos que iran al constructor de
+    la clase Estudiante, y otros valores que seran asignados a los atributos
+    propios de esta clase
+    */
+    
     // 2.  Método establecerNumeroAsginaturas(numero: Real)
     public void establecerNumeroAsginaturas(int numero){
         numeroAsignaturas = numero;
